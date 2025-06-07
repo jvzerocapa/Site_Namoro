@@ -1,0 +1,167 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.gallery img {
+  max-width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #f00;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav a {
+  color: red;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hearts-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  transform: rotate(45deg);
+  animation: float 10s linear infinite;
+}
+
+.heart::before, .heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.texto-namoro {
+  font-size: 1.2rem;
+  color: #f88;
+  margin: 20px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Tornar o layout responsivo */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .container, .gallery, .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* Padronizar o tamanho das imagens */
+img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* === ESTILOS DO OVERLAY E POPUP === */
+
+#conteudo {
+  filter: blur(50px);
+  pointer-events: none;
+  user-select: none;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#popup {
+  background-color: rgb(124, 115, 115);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  font-family: sans-serif;
+  color: black;
+}
+
+#botaoContinuar {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #000000;
+  color: white;
+  cursor: pointer;
+}
+
+#botaoContinuar:hover {
+  background-color: #ff0000;
+}

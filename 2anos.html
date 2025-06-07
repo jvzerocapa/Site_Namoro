@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2 Anos de Namoro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <audio id="musica" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+  Seu navegador não suporta áudio HTML5.
+</audio>
+
+
+  <div class="hearts-background"></div>
+  <main>
+    <h1>Nosso Segundo Ano💝</h1>
+    <p class="texto-namoro">À medida que o tempo ia passando, mesmo a gente já namorando, eu ia me apaixonando mais e mais por você. Ficava encantado com o quanto você é incrível... linda... perfeita... inteligente... e tudo de bom nesse mundo.
+Foi um ano em que fomos amadurecendo juntos, construindo ainda mais nossa parceria, nossa intimidade 😏😅, e eu fico muito feliz de ver o quanto crescemos juntos. E não estou falando apenas como casal, mas sim de como fomos crescendo como pessoa um com o outro nesse tempo.
+Você mesmo sabe que eu não sou muito bom com palavras kkkkk, mas saiba que eu sou muito feliz ao seu lado e que cada minuto, cada segundo, cada momento ao seu lado é mais que incrível.
+Obrigado por mais esse tanto de momentos incríveis ao seu lado. ❤</p>
+    <div class="gallery">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczNWnc9Ip-ZQdshqzSg-pPPeKPe_jvNh-BNSUUA1aOsQKxgDLy1IWzsrEG_SuAPjmSYb4OZLgCHz_PClg24qMiUtHcGoJLziCU6S2JXMWRYG51LdCfA2abI33JxCv2AWYfIDJWCmKwWnUbPcWWF1OBengg=w548-h973-s-no-gm?authuser=0" alt="Momento especial 1">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczNUnEnTakxs5lL4YnVViA68hUtRVvL-bODd4UHWCZ7oEpKnC2fB0Q_NgldUPeOydZzrkkDPRISI5ZAFcD0ajynSI6ALPVboBQDPo9H7jqsUi4vesVoUuc6_Mw4ywcxjeMoyTzUU9aoSppSyUbMVmU4kaw=w648-h973-s-no-gm?authuser=0" alt="Momento especial 2">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczOYzjrk8uTT6ttIXu4bBBHdoKlMJpY2aQqrZjuHrHzmR3mCCddbaAX4xyqlR90X0ayij67lBFpJ-5IN5c5sC0leaH87MmLgcQNltPJlFqEmFDuctGL1rVXp6yyaTE5KKaSpIFO0_s45XG8eZvIl5OSGLw=w648-h973-s-no-gm?authuser=0" alt="Momento especial 3">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczN1m-Sgbws3DIxB_YUARMp_d54ZWro3ZAKuLGiDMhrznKleZ31k5An6j8GKOHLvCsLbonPTH7F5nluXZtvOsJwaykKKmcc7MWVd-Bd-HiJIYbWZ3oBUUp8zvKDqUMcEpu_HLfEKlCLqQVR0BPUFxvqIcQ=w658-h973-s-no-gm?authuser=0" alt="Momento especial 4">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczOYuGfs8c9GLcCqhJNvOQ3Mgal-u-lkGnH-bEykVdjK-yG-in7osRvOwr93j4aio8U1HVzQH3--yQOth3Xed6-TQKQ48WKP7RDdHb5nQRHu6oa-5PPGGz4Nlg4NUwBWIs7L5bnmRQuNakja5Hw2zTkyVQ=w730-h973-s-no-gm?authuser=0" alt="Momento especial 5">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczN7il3YsQWwKKuo0pqR5Vbdu8m2v3rMK0RhmVxVfo3YbzFg_s4rjBpgMcSZH8s0f3VbV5FYGvSR_Hu0Ux_vuNmtVDHFVd8l1b-dmo-cHF4JiexZT1Fa65i0aTRBtTj1i_iGYSTF_hzV6zHJiyH-VEFYBw=w730-h973-s-no-gm?authuser=0" alt="Momento especial 6">
+    </div>
+    <nav>
+      <a href="index.html">Voltar</a>
+      <a id="link3anos" href="3anos.html">Clique aqui novamente...</a>
+    </nav>
+  </main>
+  <script src="hearts.js"></script>
+
+  <script>
+  const musica = document.getElementById('musica');
+  const tempoSalvo = localStorage.getItem('musicaTempo');
+  const deveTocar = localStorage.getItem('musicaDeviaTocar');
+
+  if (deveTocar) {
+    musica.currentTime = parseFloat(tempoSalvo || 0);
+    musica.play().catch(e => console.log("Erro ao tocar a música:", e));
+  }
+</script>
+
+<script>
+  // Salva o tempo atual da música e indica que ela deve tocar na próxima vez que a página for carregada
+  const link2anos = document.getElementById('link3anos');
+  link2anos.addEventListener('click', function (event) {
+    const musica = document.getElementById('musica');
+    localStorage.setItem('musicaTempo', musica.currentTime);
+    localStorage.setItem('musicaDeviaTocar', true);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 Anos de Namoro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <audio id="musica" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+  Seu navegador não suporta áudio HTML5.
+  </audio>
+
+  <div class="hearts-background"></div>
+  <main>
+    <h1>Nosso Terceiro Ano💝</h1>
+    <p class="texto-namoro"> Enfim... aqui chegamos, meu amor: nosso 3º ano!! Olha isso!! Já são 3 anos desde o começo da nossa história. Olha quantos momentos incríveis nós já vivemos juntos...
+Eu não tenho palavras para te descrever. Não consigo explicar o quanto você é especial para mim, o quanto você é importante, e o quanto eu te amo, amor.
+Tenho muito orgulho do nosso relacionamento, sabendo o quanto nós crescemos juntos e que eu tenho uma mulher parceira, uma mulher linda pra caramba, uma mulher incrível ao meu lado — independentemente de eu estar passando por um momento difícil ou feliz. Eu sei que tenho alguém ali para me ajudar, me acalmar, me dar ânimo quando preciso, e me motivar a me esforçar ainda mais quando estou desmotivado.
+Enfim, eu poderia passar dias e dias aqui escrevendo, e ainda assim sei que nem se eu passasse toda a eternidade tentando, conseguiria demonstrar tudo o que eu sinto por você: todo o amor, toda a paixão, toda a admiração... tudo!
+Sei que já falei demais kkkkk, sempre me empolgo, mas é porque eu te amo muito!
+E pode ter certeza: sempre serão eu e você contra tudo e contra todos.
+Eu te quero para sempre ao meu lado, meu amor. Eu te amo demais!!! 💖💖💖💖💖</p>
+    <div class="gallery">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczOyMcdpcN4AMS4yO4v9AOBabSve4oyXngUH6U7mkHgWtr7vCEJxTttS_x4SPDp_49RPjlLOINTJCZzI5eSJxYN5v0LEJZtuEglvGT8JimygdcCwMfjieoY_S91NFEwTY_Nj8aWRjuQIt9qXAKxlVPLi_w=w779-h973-s-no-gm?authuser=0" alt="Momento especial 1">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczN2ci4sUCR9nvqzyeYgyA23JVax8P4m8e5UiCBYyG5jjl4PMHisMOlygkm_bfnZThEABAgdev7LXrH9-swm5lZ9Kv2Aj09b2Nb4OWiQyKPiBkyBD13zMvhJ0kwdGEAlnJu44qWfPl8HqWCgFr5JnPXEEg=w730-h973-s-no-gm?authuser=0" alt="Momento especial 2">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczPI3fFAwx1oufIyeOwBv54XDgTZXlLmqqIo6NaPpOHneUynD2ztCUwwvec0yy_ac9vgiPd-NNyZsP_6y7LF-2pOSAbP6-OeGYSxmRqUaRdzg3apRhy8cA7inlZq3aGWfXf6I8l5v_zAj2NQ8vfJV5s6nw=w730-h973-s-no-gm?authuser=0" alt="Momento especial 3">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczMRl0J_w3vt6Q5ELeO4z2JjVNrsLOAL8mGjhDDm6RW4LyzaXENDcnkra1RPiXVV-GaCaZWbMfdT8KNWOw9WKzESPSeoLwUrFzjcU2aLBMIBd13q0wkw0Xuu8Kl6HDHonuuHqZPoaka11gYdtIo9SmA8ag=w730-h973-s-no-gm?authuser=0" alt="Momento especial 4">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczP84nQ-pBxtZr2DKIQawDysZTRAExtF7-TECq9Ir0azzwi10W-hQHX0UaVkh86grKORxLEWpuJX5T-dqoJe7BGJex8uGqhTVVn_qGsmbsMOV_xFiGkrW3AmppMU62IMe2Vb6lVbtl4EccdlNxxTW6CgNg=w649-h973-s-no-gm?authuser=0" alt="Momento especial 5">
+      <img src="https://lh3.googleusercontent.com/pw/AP1GczPm9NhM0Y_6cgQGAPG4m0RtGffygxLl8HqtxkM3p-3kgpusOE4Vs7NVrbQeELKu4qLntQaVxWQ-Z__hL76inFl9A_AiDpYFT08C8J6Of0YFhwEkcgeyi6kfRxC2EPTVKhulKUYkcteEn8W1DYdwK0_Zgg=w1459-h973-s-no-gm?authuser=0" alt="Momento especial 6">
+    </div>
+    <nav>
+
+      <h1>Ainda viram muitas e muitas paginas aqui... EU TE AMO ENORMEMENTE MEU AMOR💝💝💝</h1>
+      <a href="2anos.html" id="voltar2anos">Voltar</a>
+      
+    </nav>
+  </main>
+  <script src="hearts.js"></script>
+
+
+  <script>
+  const musica = document.getElementById('musica');
+  const tempoSalvo = localStorage.getItem('musicaTempo');
+  const deveTocar = localStorage.getItem('musicaDeviaTocar');
+
+  if (deveTocar === "true") {
+    musica.currentTime = parseFloat(tempoSalvo || 0);
+    musica.play().catch(e => console.log("Erro ao tocar a música:", e));
+  }
+</script>
+
+
+<script>
+  // Salva o tempo atual da música e indica que ela deve tocar na próxima vez que a página for carregada
+  const link2anos = document.getElementById('link2anos');
+  link2anos.addEventListener('click', function (event) {
+    const musica = document.getElementById('musica');
+    localStorage.setItem('musicaTempo', musica.currentTime);
+    localStorage.setItem('musicaDeviaTocar', true);
+  });
+</script>
+
+</body>
+</html>
