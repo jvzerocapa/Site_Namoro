@@ -9,7 +9,7 @@
 <body>
   
   <!-- Música de fundo -->
-    <audio id="musica" loop>
+  <audio id="musica" loop>
     <source src="musica.mp3" type="audio/mpeg">
     Seu navegador não suporta áudio HTML5.
   </audio>
@@ -29,20 +29,21 @@
   <div id="conteudo">
     <main>
       <h1>Nosso primeiro Ano💝</h1>
-  <div id="senhaContainer">
-    <p>Dica da senha : " Olhe o caderno "</p>
-    <input type="password" id="senhaInput" placeholder="Digite a senha">
-   <button onclick="verificarSenha()">Ver Mensagem</button>
-   <p id="mensagemErro" style="color: red;"></p>
-  </div>
+      <div id="senhaContainer">
+        <p>Dica da senha : " Olhe o caderno "</p>
+        <input type="password" id="senhaInput" placeholder="Digite a senha">
+        <button onclick="verificarSenha()">Ver Mensagem</button>
+        <p id="mensagemErro" style="color: red;"></p>
+      </div>
 
-<!-- Texto oculto inicialmente -->
-<p id="textoNamoro" class="texto-namoro" style="display: none;">
-  Oiii meu amor!! Aqui estou eu novamente fazendo mais uma surpresa de muitas que ainda viram para você kkkk.
-  Eu ainda posso me lembrar da sensação que eu tive quando te vi pela primeira vez😮😮😮... Eu pensei comigo mesmo : "Eu vou namorar com ela!". 
-  Logo depois.. foi quando eu tive coragem de responder aquele seu story 🤣 e começamos a conversar.
-  Então.. Tivemos nosso primeiro encontro.. Nosso Primeiro beijo.. e cada dia que passava eu ia me apaixonando por você mais e mais, e logo após isso foi quando eu tomei a melhor decisão da minha vida que foi pedir você em namoro💕 que me proporcionou esses momentos tão incriveis que vamos ver a baixo ❤❤
-</p>
+      <!-- Texto oculto inicialmente -->
+      <p id="textoNamoro" class="texto-namoro" style="display: none;">
+        Oiii meu amor!! Aqui estou eu novamente fazendo mais uma surpresa de muitas que ainda viram para você kkkk.
+        Eu ainda posso me lembrar da sensação que eu tive quando te vi pela primeira vez😮😮😮... Eu pensei comigo mesmo : "Eu vou namorar com ela!". 
+        Logo depois.. foi quando eu tive coragem de responder aquele seu story 🤣 e começamos a conversar.
+        Então.. Tivemos nosso primeiro encontro.. Nosso Primeiro beijo.. e cada dia que passava eu ia me apaixonando por você mais e mais, e logo após isso foi quando eu tomei a melhor decisão da minha vida que foi pedir você em namoro💕 que me proporcionou esses momentos tão incriveis que vamos ver a baixo ❤❤
+      </p>
+
       <div class="gallery">
         <img src="https://lh3.googleusercontent.com/pw/AP1GczOdAvNqzJ6z3OVJAjKOiRzMzHV9fNl1bEFFZk3vn3pV3r6f9Ku6hG7yPKzGQHrt8exFksVdqXionwtdrsqASYOs8jsbQ4eMNRa-EE0NbBvTpBVt366USpAj5uv5_ZFEml2Joe7hCy1DlZ4VE0x8MKGs-g=w511-h973-s-no-gm?authuser=0" alt="Momento especial 1">
         <img src="https://lh3.googleusercontent.com/pw/AP1GczPLU9DuzaG54EduiO3PySGntqQZsMhX0vvTYYPDdqCBY_gnOktYCpAIC00hHZkz8YLfoH9HpKJjwoGYbYJdfkCiTNvJgzvOSD9qKSCUlfZuW209XKqIRS9Fp0yxEGl4hsmDWTL5CTMobLDBwwoEWCa25g=w600-h973-s-no-gm?authuser=0" alt="Momento especial 2">
@@ -51,55 +52,61 @@
         <img src="https://lh3.googleusercontent.com/pw/AP1GczM-lReRjfuHeFhwmFsZnVTS4N3mzA4st8qkxED_3frgMi5gQ9OcERT_2GVfZCmRa_ymUXp7630fS62cCKV0rZgHk8Sd2NSt86hGRAi4DjBOy5_IocMYMaG9w8gOux75DP6IKvlaSyqtQclX0HYJTPBfVA=w648-h973-s-no-gm?authuser=0" alt="Momento especial 5">
         <img src="https://lh3.googleusercontent.com/pw/AP1GczP0UY-tVVH5Rwat4F8lAUTLdYDStlHhbH9PqTxTyUitalCj9rUSQqaEk6ni1qO6uAfHX84_hiWdw2_-hutM6dwdOq34lu6bDd6Ld3t6EhPKH6mxeR50KLDUsAIdOMNdhwwedVPco1YsIiCfakDlgxWjYg=w548-h973-s-no-gm?authuser=0" alt="Momento especial 6">
       </div>
+
       <nav>
         <a id="link2anos" href="2anos.html">Clique Aqui...</a>
       </nav>
     </main>
   </div>
 
-  <!-- Scripts -->
-<script src="hearts.js"></script>
-<script>
-  const botao = document.getElementById('botaoContinuar');
-  botao.addEventListener('click', () => {
-    document.getElementById('overlay').style.display = 'none';
-    const conteudo = document.getElementById('conteudo');
-    conteudo.style.filter = 'none';
-    conteudo.style.pointerEvents = 'auto';
-    conteudo.style.userSelect = 'auto';
+  <!-- Script do Fundo de corações -->
+  <script src="hearts.js"></script>
 
-    // Toca a música após o clique
-    const musica = document.getElementById('musica');
-    musica.play().catch((e) => {
-      console.log("Falha ao tocar música:", e);
+  <!-- Scripts para funcionalidade -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const botao = document.getElementById('botaoContinuar');
+      const conteudo = document.getElementById('conteudo');
+      const musica = document.getElementById('musica');
+      const link2anos = document.getElementById('link2anos');
+
+      botao.addEventListener('click', function () {
+        document.getElementById('overlay').style.display = 'none';
+        conteudo.style.filter = 'none';
+        conteudo.style.pointerEvents = 'auto';
+        conteudo.style.userSelect = 'auto';
+
+        // Toca a música (só após interação no iOS)
+        if (musica) {
+          musica.currentTime = 0;
+          musica.play().catch((e) => {
+            console.log("Falha ao tocar música:", e);
+          });
+        }
+      });
+
+      if (link2anos) {
+        link2anos.addEventListener('click', function () {
+          if (musica && !isNaN(musica.currentTime)) {
+            localStorage.setItem('musicaTempo', musica.currentTime);
+            localStorage.setItem('musicaDeviaTocar', 'true');
+          }
+        });
+      }
     });
-  });
-</script>
-<script>
-  // Salva o tempo atual da música e indica que ela deve tocar na próxima vez que a página for carregada
-  const link2anos = document.getElementById('link2anos');
-  link2anos.addEventListener('click', function (event) {
-    const musica = document.getElementById('musica');
-    localStorage.setItem('musicaTempo', musica.currentTime);
-    localStorage.setItem('musicaDeviaTocar', true);
-  });
-</script>
 
-<script>
-  function verificarSenha() {
-    const senhaCorreta = "1604"; // Alterar a senha aqui
-    const input = document.getElementById("senhaInput").value;
-    const erro = document.getElementById("mensagemErro");
+    function verificarSenha() {
+      const senhaCorreta = "1604";
+      const input = document.getElementById("senhaInput").value;
+      const erro = document.getElementById("mensagemErro");
 
-    if (input === senhaCorreta) {
-      document.getElementById("textoNamoro").style.display = "block";
-      document.getElementById("senhaContainer").style.display = "none";
-    } else {
-      erro.textContent = "Senha incorreta. Tente novamente.";
+      if (input === senhaCorreta) {
+        document.getElementById("textoNamoro").style.display = "block";
+        document.getElementById("senhaContainer").style.display = "none";
+      } else {
+        erro.textContent = "Senha incorreta. Tente novamente.";
+      }
     }
-  }
-</script>
-
-
+  </script>
 </body>
 </html>
