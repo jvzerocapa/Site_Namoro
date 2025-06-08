@@ -165,3 +165,38 @@ img {
 #botaoContinuar:hover {
   background-color: #ff0000;
 }
+
+
+#senhaContainer {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#senhaInput {
+  background-color: black;
+  color: red;
+  border: 1px solid red;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#senhaInput::placeholder {
+  color: rgba(255, 0, 0, 0.6);
+}
+
+#senhaContainer button {
+  background-color: black;
+  color: red;
+  border: 1px solid red;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#senhaContainer button:hover {
+  background-color: #1a1a1a;
+}

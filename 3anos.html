@@ -16,7 +16,15 @@
   <div class="hearts-background"></div>
   <main>
     <h1>Nosso Terceiro Ano💝</h1>
-    <p class="texto-namoro"> Enfim... aqui chegamos, meu amor: nosso 3º ano!! Olha isso!! Já são 3 anos desde o começo da nossa história. Olha quantos momentos incríveis nós já vivemos juntos...
+     <div id="senhaContainer">
+    <p>Dica da senha : " Olhe o caderno dnv dnv kkkk "</p>
+    <input type="password" id="senhaInput" placeholder="Digite a senha">
+   <button onclick="verificarSenha()">Ver Mensagem</button>
+   <p id="mensagemErro" style="color: red;"></p>
+  </div>
+
+<!-- Texto oculto inicialmente -->
+<p id="textoNamoro" class="texto-namoro" style="display: none;"> Enfim... aqui chegamos, meu amor: nosso 3º ano!! Olha isso!! Já são 3 anos desde o começo da nossa história. Olha quantos momentos incríveis nós já vivemos juntos...
 Eu não tenho palavras para te descrever. Não consigo explicar o quanto você é especial para mim, o quanto você é importante, e o quanto eu te amo, amor.
 Tenho muito orgulho do nosso relacionamento, sabendo o quanto nós crescemos juntos e que eu tenho uma mulher parceira, uma mulher linda pra caramba, uma mulher incrível ao meu lado — independentemente de eu estar passando por um momento difícil ou feliz. Eu sei que tenho alguém ali para me ajudar, me acalmar, me dar ânimo quando preciso, e me motivar a me esforçar ainda mais quando estou desmotivado.
 Enfim, eu poderia passar dias e dias aqui escrevendo, e ainda assim sei que nem se eu passasse toda a eternidade tentando, conseguiria demonstrar tudo o que eu sinto por você: todo o amor, toda a paixão, toda a admiração... tudo!
@@ -62,6 +70,22 @@ Eu te quero para sempre ao meu lado, meu amor. Eu te amo demais!!! 💖💖💖�
     localStorage.setItem('musicaDeviaTocar', true);
   });
 </script>
+
+<script>
+  function verificarSenha() {
+    const senhaCorreta = "1234"; // Alterar a senha aqui
+    const input = document.getElementById("senhaInput").value;
+    const erro = document.getElementById("mensagemErro");
+
+    if (input === senhaCorreta) {
+      document.getElementById("textoNamoro").style.display = "block";
+      document.getElementById("senhaContainer").style.display = "none";
+    } else {
+      erro.textContent = "Senha incorreta. Tente novamente.";
+    }
+  }
+</script>
+
 
 </body>
 </html>
